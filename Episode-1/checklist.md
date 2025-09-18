@@ -2,11 +2,16 @@
 
 ### 1. How the Internet Works:
 
-- History of Web (Web 1.0 to Web 3.0).
-- How computer communicate with each other.
-- How computer send data all over the world.
-- What is Domain Name, IP & MAC Addresses and Routing.
-- How ISP and DNS work together to deliver data.
+- History of Web (Web 1.0 to Web 3.0). [Link Text](https://github.com/Priyanshu-pant707/Job-Ready-AI-Powered-Cohort/blob/main/Episode-1/HowInternetWorks/1.md)
+
+- How computer communicate with each other.[Link Text](https://github.com/Priyanshu-pant707/Job-Ready-AI-Powered-Cohort/blob/main/Episode-1/HowInternetWorks/2.md)
+
+- How computer send data all over the world.[Link Text](https://github.com/Priyanshu-pant707/Job-Ready-AI-Powered-Cohort/blob/main/Episode-1/HowInternetWorks/3.md)
+
+- What is Domain Name, IP & MAC Addresses and Routing.[Link Text](https://github.com/Priyanshu-pant707/Job-Ready-AI-Powered-Cohort/blob/main/Episode-1/HowInternetWorks/4.md)
+
+- How ISP and DNS work together to deliver data.[Link Text](https://github.com/Priyanshu-pant707/Job-Ready-AI-Powered-Cohort/blob/main/Episode-1/HowInternetWorks/5.md)
+
 
 
 
