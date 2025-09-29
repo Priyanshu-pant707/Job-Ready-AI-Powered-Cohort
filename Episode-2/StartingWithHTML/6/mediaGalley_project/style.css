@@ -1,0 +1,53 @@
+  body {
+            font-family: Arial, sans-serif;
+            background: #121212;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .MAIN {
+            background-color: rgb(92, 93, 95);
+            background: linear-gradient(90deg, rgba(92, 93, 95, 1) 0%, rgba(0, 0, 0, 1) 100%);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 255, 255, 0.3);
+            width: 80%;
+            margin: auto;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 80%;
+            margin: auto;
+        }
+
+        h1 {
+            color: rgb(109, 105, 136);
+            font-size: 50px;
+            font-family:Georgia, 'Times New Roman', Times, serif ;
+        }
+
+        .gallery img {
+            width: 250px;
+            margin: 10px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 255, 255, 0.5);
+        }
+
+        .media-section {
+            margin: 40px 0;
+        }
+
+        video {
+            margin-top: 20px;
+            border: 2px solid rgb(82, 84, 84);
+            border-radius: 10px;
+        }
+
+        audio {
+            margin: 10px 0;
+            width: 300px;
+        }
