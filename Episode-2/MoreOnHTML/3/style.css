@@ -1,0 +1,97 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #1a1a1a;
+    color: #f0f0f0;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 20px;
+    background: #0f172a;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+header h1 {
+    color: #0ff;
+    margin-bottom: 10px;
+}
+header p {
+    color: #ccc;
+}
+
+/* Main Sections */
+main section {
+    background: #111827;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+main section:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 15px #0ff;
+}
+main section h2 {
+    color: #0ff;
+    margin-bottom: 10px;
+}
+
+/* Formatting tag styling */
+b {
+    font-weight: bold;
+}
+strong {
+    font-weight: bolder;
+    color: #0ff;
+}
+i {
+    font-style: italic;
+    color: #f0a500;
+}
+small {
+    font-size: 0.8rem;
+    color: #aaa;
+}
+ins {
+    text-decoration: underline;
+    color: #0f0;
+}
+sub {
+    vertical-align: sub;
+    font-size: 0.8rem;
+}
+sup {
+    vertical-align: super;
+    font-size: 0.8rem;
+}
+del {
+    text-decoration: line-through;
+    color: #f00;
+}
+mark {
+    background-color: #ff0;
+    color: #000;
+    padding: 0 3px;
+    border-radius: 3px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 30px;
+    padding: 15px;
+    background: #0f172a;
+    border-radius: 10px;
+    color: #aaa;
+}
