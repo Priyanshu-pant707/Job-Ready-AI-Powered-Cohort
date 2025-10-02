@@ -1,0 +1,128 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background: #1e1e1e;
+    color: #f0f0f0;
+    padding: 0 20px;
+}
+
+/* Header */
+header {
+    background: #0f172a;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+header h1 {
+    color: rgb(202, 234, 234);
+    margin-bottom: 10px;
+}
+header nav a {
+    color: rgb(139, 143, 143);
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+header nav a:hover {
+    text-decoration: underline;
+}
+
+/* Main */
+main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+}
+
+/* Section & Article */
+section, article {
+    background: #111827;
+    padding: 20px;
+    border-radius: 10px;
+}
+section h2, article h2 {
+    color: #0ff;
+    margin-bottom: 10px;
+}
+
+/* Aside */
+aside {
+    background: #111827;
+    padding: 20px;
+    border-radius: 10px;
+}
+aside h3 {
+    color: #0ff;
+    margin-bottom: 10px;
+}
+aside ul {
+    list-style: none;
+}
+aside ul li a {
+    color: #f0f0f0;
+    text-decoration: none;
+}
+aside ul li a:hover {
+    color: #0ff;
+}
+
+/* Figure */
+figure {
+    margin: 15px 0;
+    text-align: center;
+}
+figure img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+figcaption {
+    font-size: 0.9rem;
+    color: #aaa;
+    margin-top: 5px;
+}
+
+/* Form */
+form {
+    display: flex;
+    flex-direction: column;
+}
+form label {
+    margin: 10px 0 5px;
+}
+form input, form textarea {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+form button {
+    margin-top: 10px;
+    padding: 10px;
+    background: #0ff;
+    color: #111827;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+form button:hover {
+    background: #06b2b2;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 15px;
+    background: #0f172a;
+    border-radius: 10px;
+    color: #aaa;
+}
