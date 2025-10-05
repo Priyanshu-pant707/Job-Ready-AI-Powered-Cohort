@@ -18,3 +18,12 @@
 - Differentiating between block and inline elements
 - Text formatting tags in HTML - `b` , `string` , `i` , `small` , `ins` , `sub` , `sup` , `del` , `mark`
 - Working with HTML tables - `table` , `td` , `tr` , `th`
+
+
+### 3. HTML Forms and Inputs
+
+- What is Form and why its important
+- Creating a simple Form with tags - `form` , `input` , `textarea` , `select` , `button` , `label`
+- Types of input fields - `checkbox`, `text` , `color` , `file` , `tel` , `date` , `number` , `radio` , `submit` , `range`
+- Attributes of Form Elements - `method`, `actions`, `target`, `novalidate`, `enctype`, `name`, required, placeholder
+
