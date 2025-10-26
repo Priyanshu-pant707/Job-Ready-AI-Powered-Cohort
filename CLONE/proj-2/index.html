@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Professional Dashboard — Input Types Demo</title>
+  <style>
+    :root{
+      --bg:#0f1724; /* dark navy */
+      --card:#0b1220;
+      --muted:#94a3b8;
+      --accent:#00d1c1; /* cyan */
+      --glass: rgba(255,255,255,0.03);
+      --glass-2: rgba(255,255,255,0.02);
+      --radius:12px;
+      --glass-border: rgba(255,255,255,0.04);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;background:linear-gradient(180deg,#071024 0%,var(--bg) 100%);color:#e6eef6;margin:0}
+
+    /* Layout */
+    .app{display:grid;grid-template-columns:260px 1fr;gap:20px;min-height:100vh;padding:24px}
+    .sidebar{background:linear-gradient(180deg,var(--card),#06111b);border-radius:var(--radius);padding:20px;border:1px solid var(--glass-border);box-shadow:0 6px 30px rgba(2,6,23,0.6)}
+    .brand{display:flex;gap:12px;align-items:center;margin-bottom:18px}
+    .logo{width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#1fb6ff);display:grid;place-items:center;font-weight:700;color:#002;box-shadow:0 6px 18px rgba(3, 218, 200, 0.08)}
+    .brand h1{font-size:16px;margin:0}
+    .nav{margin-top:12px}
+    .nav a{display:flex;align-items:center;gap:10px;padding:10px;border-radius:10px;color:var(--muted);text-decoration:none;font-size:14px;margin-bottom:6px}
+    .nav a.active{background:linear-gradient(90deg, rgba(0,209,193,0.06), rgba(31,182,255,0.03));color:var(--accent);border:1px solid rgba(0,209,193,0.06)}
+
+    .main{padding:18px}
+    .header{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}
+    .header .search{background:var(--glass);padding:8px 12px;border-radius:10px;border:1px solid var(--glass-border);display:flex;gap:8px;align-items:center}
+    .header .profile{display:flex;align-items:center;gap:12px}
+    .avatar{width:40px;height:40px;border-radius:10px;background:linear-gradient(135deg,#1f2937,#0b1220);display:grid;place-items:center;color:var(--muted)}
+
+    /* Grid */
+    .grid{display:grid;grid-template-columns:1fr 420px;gap:18px}
+
+    /* Card */
+    .card{background:linear-gradient(180deg,var(--card),#07121b);border-radius:14px;padding:18px;border:1px solid var(--glass-border);}
+    .card h2{margin:0 0 8px 0}
+    .muted{color:var(--muted);font-size:13px}
+
+    /* Form styles */
+    form .row{display:flex;gap:12px}
+    form .col{flex:1}
+    label{display:block;font-size:13px;margin-bottom:6px;color:#cde3ee}
+    .input, input[type="text"], input[type="tel"], input[type="date"], input[type="number"], select{width:100%;background:var(--glass);border:1px solid var(--glass-border);padding:10px 12px;border-radius:10px;color:inherit;font-size:14px}
+    input[type="file"]{width:100%}
+
+    .controls{display:flex;flex-direction:column;gap:12px}
+    .inline{display:flex;gap:12px;align-items:center}
+    .checkbox-row{display:flex;gap:12px;align-items:center}
+    .radio-row{display:flex;gap:12px;align-items:center}
+
+    input[type="checkbox"], input[type="radio"]{width:18px;height:18px}
+
+    input[type="range"]{width:100%}
+
+    .color-preview{display:inline-block;width:28px;height:28px;border-radius:6px;border:1px solid var(--glass-border);vertical-align:middle;margin-left:8px}
+
+    .submit-row{display:flex;justify-content:space-between;align-items:center;margin-top:14px}
+    button.btn{background:linear-gradient(90deg,var(--accent),#1fb6ff);border:none;padding:10px 14px;border-radius:10px;color:#042;cursor:pointer;font-weight:600}
+
+    .sidebar .stats{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:16px}
+    .stat{background:var(--glass-2);padding:8px;border-radius:8px;text-align:center}
+    .stat h3{margin:0;font-size:16px}
+    .small{font-size:12px;color:var(--muted)}
+
+    /* responsive */
+    @media (max-width:920px){.app{grid-template-columns:1fr;}.grid{grid-template-columns:1fr}.sidebar{order:2}}
+  </style>
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="logo">PD</div>
+        <div>
+          <h1>ProDash</h1>
+          <div class="small">Input types demo</div>
+        </div>
+      </div>
+      <nav class="nav">
+        <a class="active">Overview</a>
+        <a>Forms</a>
+        <a>Settings</a>
+        <a>Users</a>
+        <a>Reports</a>
+      </nav>
+
+      <div class="stats">
+        <div class="stat"><h3>1.2K</h3><div class="small">Active users</div></div>
+        <div class="stat"><h3>94%</h3><div class="small">Form completion</div></div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <div class="header">
+        <div class="search">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21 21l-4.35-4.35" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="11" cy="11" r="6" stroke="currentColor" stroke-width="1.5"/></svg>
+          <input placeholder="Search forms, users or fields" style="background:transparent;border:0;outline:0;color:var(--muted);width:360px">
+        </div>
+        <div class="profile">
+          <div style="text-align:right"><div style="font-weight:700">Priyanshu</div><div class="small">Admin</div></div>
+          <div class="avatar">PP</div>
+        </div>
+      </div>
+
+      <div class="grid">
+        <section>
+          <div class="card">
+            <h2>Form components — all HTML input types</h2>
+            <div class="muted">A compact, professional demo form showing each input type and helpful UI behaviors.</div>
+
+            <form id="demoForm" style="margin-top:14px">
+              <div class="controls">
+                <div class="row">
+                  <div class="col">
+                    <label for="fullName">Full name (text)</label>
+                    <input id="fullName" class="input" type="text" placeholder="e.g. Priyanshu Pant" required>
+                  </div>
+                  <div class="col">
+                    <label for="phone">Phone (tel)</label>
+                    <input id="phone" class="input" type="tel" placeholder="+91 98765 43210" pattern="\+?\d{7,15}">
+                    <div class="small">Use international format. Pattern allows digits and optional +</div>
+                  </div>
+                </div>
+
+                <div class="row" style="margin-top:10px">
+                  <div class="col">
+                    <label for="birth">Birth date (date)</label>
+                    <input id="birth" class="input" type="date">
+                  </div>
+                  <div class="col">
+                    <label for="quantity">Favorite number (number)</label>
+                    <input id="quantity" class="input" type="number" min="0" max="100" value="25">
+                  </div>
+                </div>
+
+                <div style="margin-top:10px">
+                  <label>Choose a color (color)</label>
+                  <div class="inline">
+                    <input id="favcolor" type="color" value="#00d1c1">
+                    <div id="colorPreview" class="color-preview" style="background:#00d1c1"></div>
+                    <div class="small" style="margin-left:8px">Current: <span id="colorVal">#00d1c1</span></div>
+                  </div>
+                </div>
+
+                <div style="margin-top:12px">
+                  <label>Upload avatar (file)</label>
+                  <input id="avatar" type="file" accept="image/*">
+                  <div class="small" id="fileName">No file chosen</div>
+                </div>
+
+                <div style="margin-top:12px">
+                  <label>Interests (checkbox)</label>
+                  <div class="checkbox-row">
+                    <label><input type="checkbox" name="interest" value="ai"> AI</label>
+                    <label><input type="checkbox" name="interest" value="web"> Web</label>
+                    <label><input type="checkbox" name="interest" value="ml"> ML</label>
+                  </div>
+                </div>
+
+                <div style="margin-top:10px">
+                  <label>Account tier (radio)</label>
+                  <div class="radio-row">
+                    <label><input type="radio" name="tier" value="basic" checked> Basic</label>
+                    <label><input type="radio" name="tier" value="pro"> Pro</label>
+                    <label><input type="radio" name="tier" value="enterprise"> Enterprise</label>
+                  </div>
+                </div>
+
+                <div style="margin-top:12px">
+                  <label for="satisfaction">Satisfaction (range)</label>
+                  <input id="satisfaction" type="range" min="0" max="100" value="70">
+                  <div class="small">Value: <span id="rangeVal">70</span></div>
+                </div>
+
+                <div style="margin-top:12px">
+                  <label for="notes">Notes (text area simulated with text input)</label>
+                  <input id="notes" type="text" placeholder="Short note about this profile">
+                </div>
+
+                <div class="submit-row">
+                  <div class="small">Form demonstrates: text, tel, date, number, color, file, checkbox, radio, range, submit.</div>
+                  <div>
+                    <button class="btn" type="submit">Save profile</button>
+                  </div>
+                </div>
+              </div>
+            </form>
+
+          </div>
+
+          <div style="height:14px"></div>
+
+          <div class="card">
+            <h2>Live preview</h2>
+            <div class="muted">See the values you selected and get quick validation hints.</div>
+            <pre id="preview" style="background:transparent;border-radius:8px;padding:10px;margin-top:10px;color:var(--muted);white-space:pre-wrap;font-size:13px"></pre>
+          </div>
+        </section>
+
+        <aside>
+          <div class="card">
+            <h2>Quick tips</h2>
+            <ul class="muted" style="padding-left:18px;margin-top:10px">
+              <li>Use <code>pattern</code> on <code>tel</code> for validation.</li>
+              <li>Prefer <code>input[type="file"] accept="image/*"</code> for avatars.</li>
+              <li>Group radio inputs with the same <code>name</code> to ensure mutual exclusion.</li>
+              <li>Range sliders are great for quick preference settings — show the value next to the slider.</li>
+            </ul>
+          </div>
+
+          <div style="height:12px"></div>
+
+          <div class="card">
+            <h2>Status</h2>
+            <div style="display:flex;gap:10px;margin-top:8px">
+              <div style="flex:1;text-align:center">
+                <div style="font-weight:700">Ready</div>
+                <div class="small">All components loaded</div>
+              </div>
+              <div style="flex:1;text-align:center">
+                <div style="font-weight:700">No errors</div>
+                <div class="small">Validation hints show here</div>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    // small interactivity: preview & helpers
+    const form = document.getElementById('demoForm');
+    const preview = document.getElementById('preview');
+    const phone = document.getElementById('phone');
+    const avatar = document.getElementById('avatar');
+    const fileName = document.getElementById('fileName');
+
+    const favcolor = document.getElementById('favcolor');
+    const colorPreview = document.getElementById('colorPreview');
+    const colorVal = document.getElementById('colorVal');
+
+    const range = document.getElementById('satisfaction');
+    const rangeVal = document.getElementById('rangeVal');
+
+    function updatePreview(){
+      const data = {
+        name: document.getElementById('fullName').value,
+        phone: phone.value,
+        birth: document.getElementById('birth').value,
+        number: document.getElementById('quantity').value,
+        color: colorVal.textContent,
+        file: fileName.textContent,
+        interests: Array.from(document.querySelectorAll('input[name="interest"]:checked')).map(n => n.value),
+        tier: (document.querySelector('input[name="tier"]:checked')||{}).value || null,
+        satisfaction: range.value,
+        notes: document.getElementById('notes').value
+      }
+      preview.textContent = JSON.stringify(data, null, 2)
+    }
+
+    favcolor.addEventListener('input', e=>{
+      colorPreview.style.background = e.target.value;
+      colorVal.textContent = e.target.value;
+      updatePreview();
+    });
+
+    range.addEventListener('input', e=>{rangeVal.textContent = e.target.value;updatePreview()});
+
+    avatar.addEventListener('change', e=>{
+      const f = e.target.files && e.target.files[0];
+      fileName.textContent = f ? f.name : 'No file chosen';
+      updatePreview();
+    });
+
+    form.addEventListener('input', updatePreview);
+
+    form.addEventListener('submit', e=>{
+      e.preventDefault();
+      // simple inline validation example
+      if(!document.getElementById('fullName').value.trim()){
+        alert('Please enter a name');
+        return;
+      }
+      alert('Profile saved (demo). Check preview for values.')
+    });
+
+    // init
+    updatePreview();
+  </script>
+</body>
+</html>
