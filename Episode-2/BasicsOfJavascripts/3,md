@@ -1,0 +1,27 @@
+# variable and keywords 
+
+
+
+
+### var
+- function scoped
+- hoisted
+- allows redeclaration
+
+
+### let
+- blocked scoped
+- no redeclaration
+- preferred
+
+
+### const
+- block scoped 
+- cannot reassign
+- object values can change
+
+
+
+
+
+
